@@ -1,196 +1,267 @@
-
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | หน้าหลัก</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Portfolio | Home</title>
 
-    <style>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Prompt',sans-serif;
-        }
+<style>
 
-        body{
-            background:linear-gradient(135deg,#0f172a,#1e3a8a);
-            color:#fff;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt',sans-serif;
+}
 
-        nav{
-            width:100%;
-            padding:20px 8%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            position:fixed;
-            top:0;
-            background:rgba(15,23,42,.85);
-            backdrop-filter:blur(10px);
-        }
+body{
+    background:linear-gradient(135deg,#FFF5F8,#FFDDEB);
+    color:#5B4B4B;
+}
 
-        .logo{
-            font-size:28px;
-            font-weight:700;
-        }
+/* ===== Navbar ===== */
 
-        nav ul{
-            display:flex;
-            list-style:none;
-        }
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,.8);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    width:100%;
+    top:0;
+}
 
-        nav ul li{
-            margin-left:30px;
-        }
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#F472B6;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            transition:.3s;
-        }
+nav ul{
+    display:flex;
+    list-style:none;
+}
 
-        nav a:hover{
-            color:#38bdf8;
-        }
+nav ul li{
+    margin-left:25px;
+}
 
-        .hero{
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            padding:120px 10%;
-            gap:70px;
-        }
+nav a{
+    text-decoration:none;
+    color:#5B4B4B;
+    transition:.3s;
+}
 
-        .text{
-            flex:1;
-        }
+nav a:hover{
+    color:#F472B6;
+}
 
-        .text h3{
-            color:#38bdf8;
-            font-size:24px;
-        }
+/* ===== Hero ===== */
 
-        .text h1{
-            font-size:60px;
-            margin:15px 0;
-        }
+.hero{
 
-        .text h2{
-            font-weight:400;
-            color:#cbd5e1;
-        }
+    min-height:100vh;
 
-        .text p{
-            margin:30px 0;
-            line-height:1.8;
-            max-width:550px;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        .btn{
-            display:inline-block;
-            background:#38bdf8;
-            color:#0f172a;
-            padding:15px 35px;
-            border-radius:50px;
-            text-decoration:none;
-            font-weight:600;
-            transition:.3s;
-        }
+    gap:60px;
 
-        .btn:hover{
-            transform:translateY(-3px);
-            box-shadow:0 10px 25px rgba(56,189,248,.4);
-        }
+    padding:120px 10%;
 
-        .image{
-            flex:1;
-            display:flex;
-            justify-content:center;
-        }
+}
 
-        .image img{
-            width:330px;
-            height:330px;
-            border-radius:50%;
-            object-fit:cover;
-            border:6px solid #38bdf8;
-            box-shadow:0 0 40px rgba(56,189,248,.4);
-        }
+.hero-text{
 
-        .info{
-            background:white;
-            color:#333;
-            padding:80px 10%;
-        }
+    flex:1;
 
-        .info h2{
-            text-align:center;
-            margin-bottom:40px;
-            color:#1e3a8a;
-        }
+}
 
-        .cards{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-            gap:25px;
-        }
+.hero-text h3{
 
-        .card{
-            background:#f8fafc;
-            border-radius:15px;
-            padding:30px;
-            text-align:center;
-            transition:.3s;
-        }
+    color:#F472B6;
+    font-size:22px;
 
-        .card:hover{
-            transform:translateY(-8px);
-        }
+}
 
-        .card h3{
-            margin-bottom:15px;
-            color:#2563eb;
-        }
+.hero-text h1{
 
-        footer{
-            background:#0f172a;
-            color:white;
-            text-align:center;
-            padding:25px;
-        }
+    font-size:55px;
+    margin:10px 0;
 
-        @media(max-width:900px){
+}
 
-            nav{
-                flex-direction:column;
-            }
+.hero-text h2{
 
-            nav ul{
-                margin-top:15px;
-            }
+    font-weight:400;
+    color:#8B6B75;
 
-            .hero{
-                flex-direction:column-reverse;
-                text-align:center;
-            }
+}
 
-            .text p{
-                max-width:100%;
-            }
+.hero-text p{
 
-            .text h1{
-                font-size:42px;
-            }
+    margin:25px 0;
+    line-height:1.8;
 
-        }
+}
 
-    </style>
+.btn{
+
+    display:inline-block;
+    padding:15px 35px;
+
+    background:#F9A8D4;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#F472B6;
+
+}
+
+.hero-image{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:320px;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:0 15px 35px rgba(255,182,193,.5);
+
+}
+
+/* ===== Cards ===== */
+
+section{
+
+    padding:80px 10%;
+
+}
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    color:#F472B6;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:#F472B6;
+
+}
+
+/* ===== Footer ===== */
+
+footer{
+
+    background:#FFC2D1;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:white;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column-reverse;
+text-align:center;
+
+}
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+}
+
+</style>
 
 </head>
 
@@ -198,85 +269,103 @@
 
 <nav>
 
-    <div class="logo">My Portfolio</div>
+<div class="logo">🌸 My Portfolio</div>
 
-    <ul>
+<ul>
 
-        <li><a href="index.html">หน้าหลัก</a></li>
-        <li><a href="about.html">ประวัติส่วนตัว</a></li>
-        <li><a href="education.html">การศึกษา</a></li>
-        <li><a href="projects.html">ผลงาน</a></li>
-        <li><a href="contact.html">ติดต่อ</a></li>
+<li><a href="index.html">หน้าหลัก</a></li>
 
-    </ul>
+<li><a href="about.html">ประวัติส่วนตัว</a></li>
+
+<li><a href="education.html">การศึกษา</a></li>
+
+<li><a href="projects.html">ผลงาน</a></li>
+
+<li><a href="contact.html">ติดต่อ</a></li>
+
+</ul>
 
 </nav>
 
 <section class="hero">
 
-    <div class="text">
+<div class="hero-text">
 
-        <h3>WELCOME TO MY PORTFOLIO</h3>
+<h3>🌷 Welcome to My Portfolio</h3>
 
-        <h1>ชื่อ - นามสกุล</h1>
+<h1>ชื่อ - นามสกุล</h1>
 
-        <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
+<h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
 
-        <p>
-            สวัสดีครับ ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของผม
-            เว็บไซต์นี้รวบรวมประวัติส่วนตัว ประวัติการศึกษา
-            ผลงาน และช่องทางการติดต่อ เพื่อใช้ประกอบการศึกษาต่อ
-            และแสดงทักษะด้านการพัฒนาเว็บไซต์และการเขียนโปรแกรม
-        </p>
+<p>
 
-        <a href="about.html" class="btn">เริ่มต้นทำความรู้จัก</a>
+สวัสดีค่ะ ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน 💗
+เว็บไซต์นี้รวบรวมประวัติส่วนตัว ประวัติการศึกษา ผลงาน และช่องทางการติดต่อ
+เพื่อใช้ประกอบการศึกษาต่อและแสดงผลงานที่ภาคภูมิใจ
 
-    </div>
+</p>
 
-    <div class="image">
+<a href="about.html" class="btn">รู้จักฉันเพิ่มเติม 💕</a>
 
-        <img src="images/profile.jpg" alt="Profile">
+</div>
 
-    </div>
+<div class="hero-image">
+
+<img src="images/profile.jpg" alt="Profile">
+
+</div>
 
 </section>
 
-<section class="info">
+<section>
 
-    <h2>เนื้อหาภายในเว็บไซต์</h2>
+<h2 class="title">🌼 เมนูภายในเว็บไซต์ 🌼</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>👤 ประวัติส่วนตัว</h3>
-            <p>ข้อมูลส่วนตัว ความสามารถ และเป้าหมายในอนาคต</p>
-        </div>
+<div class="card">
 
-        <div class="card">
-            <h3>🎓 การศึกษา</h3>
-            <p>ประวัติการศึกษา ผลการเรียน และกิจกรรม</p>
-        </div>
+<h3>👩‍🎓 ประวัติส่วนตัว</h3>
 
-        <div class="card">
-            <h3>💻 ผลงาน</h3>
-            <p>รวบรวมผลงานด้านเว็บไซต์และการเขียนโปรแกรม</p>
-        </div>
+<p>ข้อมูลส่วนตัว ความสามารถ และงานอดิเรก</p>
 
-        <div class="card">
-            <h3>📞 ติดต่อ</h3>
-            <p>ช่องทางการติดต่อและสื่อสังคมออนไลน์</p>
-        </div>
+</div>
 
-    </div>
+<div class="card">
+
+<h3>📚 การศึกษา</h3>
+
+<p>ประวัติการศึกษา ผลการเรียน และกิจกรรม</p>
+
+</div>
+
+<div class="card">
+
+<h3>💻 ผลงาน</h3>
+
+<p>รวบรวมผลงานและโครงงานที่เคยทำ</p>
+
+</div>
+
+<div class="card">
+
+<h3>💌 ติดต่อ</h3>
+
+<p>ช่องทางการติดต่อและ Social Media</p>
+
+</div>
+
+</div>
 
 </section>
 
 <footer>
 
-    © 2026 My Portfolio | พัฒนาเว็บไซต์ด้วย HTML & CSS
+🌸 © 2026 My Portfolio | Made with 🤍
 
 </footer>
 
 </body>
 </html>
 ```
+
