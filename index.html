@@ -1,199 +1,527 @@
-.floating{
-    position:fixed;
-    font-size:25px;
-    animation:float 8s linear infinite;
-    opacity:.7;
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Pink Portfolio 🌸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
 }
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #ffe1ef,
+        #fff0f7,
+        #ffd1e6
+    );
+
+    overflow:hidden;
+
+    cursor:none;
+
+}
+
+
+/* ---------------- ดาวตามเมาส์ ---------------- */
+
+.star{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:18px;
+
+    pointer-events:none;
+
+    animation:starMove 1s linear forwards;
+
+}
+
+@keyframes starMove{
+
+    from{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+        transform:scale(0) translateY(-30px);
+
+    }
+
+}
+
+
+/* ---------------- ดอกไม้ลอย ---------------- */
+
+
+.floating{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:30px;
+
+    animation:float 10s linear infinite;
+
+    opacity:.8;
+
+}
+
 
 @keyframes float{
-    from{
-        transform:translateY(100vh) rotate(0deg);
+
+    0%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
     }
-    to{
-        transform:translateY(-120px) rotate(360deg);
+
+    100%{
+
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
     }
-}<div class="floating" style="left:10%; animation-delay:0s;">🌸</div>
-<div class="floating" style="left:30%; animation-delay:2s;">💗</div>
-<div class="floating" style="left:50%; animation-delay:4s;">🌸</div>
-<div class="floating" style="left:70%; animation-delay:1s;">🎀</div>
-<div class="floating" style="left:90%; animation-delay:3s;">💖</div>.card{
-    transition:.4s;
+
 }
+
+
+/* ---------------- Navbar ---------------- */
+
+
+nav{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:
+    rgba(255,255,255,.35);
+
+    backdrop-filter:blur(15px);
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    box-shadow:
+    0 10px 30px rgba(255,100,160,.2);
+
+    z-index:10;
+
+}
+
+
+nav a{
+
+    color:#d63384;
+
+    text-decoration:none;
+
+    margin:0 15px;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:#ff4d94;
+
+    text-shadow:
+    0 0 10px #ff8fc7;
+
+}
+
+
+/* ---------------- กล่องหลัก ---------------- */
+
+
+.container{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.card{
+
+    width:420px;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:
+    rgba(255,255,255,.35);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:35px;
+
+    border:
+    1px solid rgba(255,255,255,.6);
+
+
+    box-shadow:
+
+    0 20px 50px rgba(255,105,180,.25);
+
+
+    transition:.5s;
+
+}
+
+
+/* การ์ดเด้ง */
 
 .card:hover{
-    transform:translateY(-12px);
-}.profile{
 
-border:6px solid white;
-
-box-shadow:
-0 0 20px #ff9ac7,
-0 0 40px #ffc4dd;
-
-transition:.4s;
+    transform:
+    translateY(-15px)
+    scale(1.03);
 
 }
+
+
+
+/* ---------------- รูปโปรไฟล์ ---------------- */
+
+
+.profile{
+
+    width:200px;
+
+    height:200px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+
+    box-shadow:
+
+    0 0 25px #ff9bc7;
+
+
+    transition:.4s;
+
+}
+
 
 .profile:hover{
 
-transform:scale(1.08);
-
-box-shadow:
-0 0 30px #ff6fa8,
-0 0 60px #ffb6d5;
-
-}.btn{
-
-background:linear-gradient(
-45deg,
-#ff9ac7,
-#ff7eb6,
-#ffb6d5);
-
-background-size:250%;
-
-transition:.4s;
+    transform:
+    rotate(5deg)
+    scale(1.1);
 
 }
+
+
+
+/* ---------------- ข้อความ ---------------- */
+
+
+h1{
+
+    margin-top:20px;
+
+    color:#e75480;
+
+    font-size:38px;
+
+}
+
+
+h2{
+
+    color:#ff69a6;
+
+    font-weight:400;
+
+}
+
+
+p{
+
+    color:#777;
+
+    margin-top:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ---------------- ปุ่ม ---------------- */
+
+
+.btn{
+
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 35px;
+
+
+    border-radius:40px;
+
+
+    background:
+
+    linear-gradient(
+        45deg,
+        #ff85b3,
+        #ffb6d9
+    );
+
+
+    color:white;
+
+    text-decoration:none;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(255,105,180,.3);
+
+
+    transition:.4s;
+
+}
+
+
 
 .btn:hover{
 
-background-position:right;
+    transform:
+    translateY(-5px)
+    scale(1.1);
 
-transform:scale(1.05);
 
-}nav a{
+    box-shadow:
 
-position:relative;
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-left:50%;
-
-bottom:-5px;
-
-width:0;
-
-height:3px;
-
-background:#ff6fa8;
-
-transition:.3s;
-
-transform:translateX(-50%);
-
-border-radius:20px;
+    0 15px 35px rgba(255,105,180,.5);
 
 }
 
-nav a:hover::after{
 
-width:80%;
+/* ---------------- ไอคอนน่ารัก ---------------- */
 
-}.card{
 
-background:rgba(255,255,255,.28);
+.icon{
 
-backdrop-filter:blur(20px);
+    font-size:35px;
 
-border:1px solid rgba(255,255,255,.5);
+    margin:10px;
 
-}<h2 id="typing"></h2>
+    animation:bounce 2s infinite;
+
+}
+
+
+@keyframes bounce{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ดอกไม้และหัวใจลอย -->
+
+<div class="floating" style="left:10%">🌸</div>
+
+<div class="floating" style="left:25%;animation-delay:2s">
+💗
+</div>
+
+<div class="floating" style="left:50%;animation-delay:4s">
+🌸
+</div>
+
+<div class="floating" style="left:70%;animation-delay:1s">
+🎀
+</div>
+
+<div class="floating" style="left:90%;animation-delay:3s">
+💖
+</div>
+
+
+
+<nav>
+
+<a href="#">หน้าหลัก</a>
+
+<a href="about.html">ประวัติส่วนตัว</a>
+<a href="education.html">การศึกษา</a>
+
+<a href="projects.html">ผลงาน</a>
+
+<a href="contact.html">ติดต่อ</a>
+
+</nav>
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<div>
+
+<span class="icon">🐰</span>
+
+<span class="icon">🌸</span>
+
+<span class="icon">🎀</span>
+
+</div>
+
+
+<img 
+src="images/profile.jpg"
+class="profile"
+>
+
+
+<h1>
+สวัสดีค่ะ 👋
+</h1>
+
+
+<h2>
+ทิพวรรณ ดวงทำ
+</h2>
+
+
+<p>
+
+นักเรียนชั้นมัธยมศึกษาปีที่ 6
+
+<br>
+
+ยินดีต้อนรับเข้าสู่ Portfolio 
+
+<br>
+
+สร้างด้วยความตั้งใจและความรัก 💗
+
+</p>
+
+
+
+<a href="about.html" class="btn">
+
+รู้จักฉันเพิ่มเติม 🌸
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
 
 <script>
 
-const text="Welcome to My Portfolio 🌸";
 
-let i=0;
+// ดาวตามเมาส์
 
-function typing(){
+document.addEventListener(
+"mousemove",
+function(e){
 
-if(i<text.length){
 
-document.getElementById("typing").innerHTML+=text.charAt(i);
+let star=document.createElement("div");
 
-i++;
 
-setTimeout(typing,80);
+star.className="star";
 
-}
 
-}
+star.innerHTML="✦";
 
-typing();
 
-</script>body{
+star.style.left=e.pageX+"px";
 
-background:linear-gradient(
-135deg,
-#FFE4F2,
-#FFF5F9,
-#FFD9EC);
+star.style.top=e.pageY+"px";
 
-}<div class="heart">💗</div>.heart{
 
-position:absolute;
+document.body.appendChild(star);
 
-top:15px;
 
-right:20px;
 
-font-size:30px;
+setTimeout(()=>{
 
-animation:heart 2s infinite;
+star.remove();
+
+},1000);
+
+
 
 }
 
-@keyframes heart{
+);
 
-0%,100%{
 
-transform:scale(1);
+</script>
 
-}
 
-50%{
+</body>
 
-transform:scale(1.2);
-
-}
-
-}<footer>
-
-Made with 💖 | Portfolio 2026
-
-</footer>──────────────────────────────────
-
-          🌸 Portfolio 🌸
-
- Home  About  Education Projects Contact
-
-             💗
-
-          ◯ รูปโปรไฟล์ ◯
-
-      สวัสดีค่ะ 👋
-
-      ทิพวรรณ ดวงทำ
-
-  Welcome to My Portfolio...
-นักเรียนมัธยมศึกษาปีที่6
-แผนการเรียน วิทย์-คณิตศสาสตร์
-
-      [ รู้จักฉันเพิ่มเติม ]
-
-──────────────────────────────────
-
-🌸      💖        🎀       🌸
-
-ดอกไม้และหัวใจลอยตลอดเวลา
-
-──────────────────────────────────
-
-Made with 💖
+</html>
