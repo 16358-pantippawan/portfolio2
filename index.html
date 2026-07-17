@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | Home</title>
+<title>My Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,75 +14,72 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Kanit',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
 }
 
 body{
 
-    min-height:100vh;
+min-height:100vh;
 
-    background:linear-gradient(135deg,#FFE6F0,#FFDDEE,#FFF4F8);
+background:linear-gradient(135deg,#FFE4F1,#FFD6EA,#FFF4F8);
 
-    overflow-x:hidden;
+overflow:hidden;
 
 }
 
-/* ---------- พื้นหลังตกแต่ง ---------- */
+/* พื้นหลัง */
 
-body::before{
+.circle1{
 
-content:"";
+position:absolute;
 
-position:fixed;
+width:300px;
+height:300px;
 
-width:350px;
-height:350px;
-
-background:#ffb6d5;
+background:#ffc2de;
 
 border-radius:50%;
 
-top:-120px;
-left:-100px;
+top:-100px;
+left:-80px;
 
-opacity:.4;
+filter:blur(50px);
 
-filter:blur(80px);
+opacity:.6;
 
 }
 
-body::after{
+.circle2{
 
-content:"";
+position:absolute;
 
-position:fixed;
+width:250px;
+height:250px;
 
-width:350px;
-height:350px;
-
-background:#ffc9e3;
+background:#ffd9ec;
 
 border-radius:50%;
 
-right:-100px;
-bottom:-100px;
+right:-80px;
+bottom:-80px;
 
-opacity:.5;
+filter:blur(50px);
 
-filter:blur(80px);
+opacity:.6;
 
 }
 
-/* ---------- เมนู ---------- */
+/* Navbar */
 
 nav{
 
 position:fixed;
 
 top:20px;
+
 left:50%;
 
 transform:translateX(-50%);
@@ -91,7 +88,7 @@ width:90%;
 
 max-width:1100px;
 
-padding:15px 35px;
+padding:15px 30px;
 
 display:flex;
 
@@ -103,13 +100,9 @@ background:rgba(255,255,255,.35);
 
 backdrop-filter:blur(18px);
 
-border:1px solid rgba(255,255,255,.5);
-
 border-radius:50px;
 
-box-shadow:0 10px 25px rgba(255,105,180,.15);
-
-z-index:1000;
+box-shadow:0 8px 25px rgba(255,105,180,.15);
 
 }
 
@@ -119,7 +112,7 @@ font-size:28px;
 
 font-weight:bold;
 
-color:#e75480;
+color:#ff5c9e;
 
 }
 
@@ -127,49 +120,49 @@ nav ul{
 
 display:flex;
 
-list-style:none;
+gap:25px;
 
-gap:30px;
+list-style:none;
 
 }
 
-nav ul li a{
+nav a{
 
 text-decoration:none;
 
 color:#d63384;
 
-font-weight:500;
-
-transition:.35s;
-
-padding:8px 15px;
+padding:10px 18px;
 
 border-radius:30px;
 
+transition:.35s;
+
+font-weight:500;
+
 }
 
-nav ul li a:hover{
+nav a:hover{
 
-background:#ffb6d5;
+background:#ff8fbc;
 
 color:white;
 
-transform:translateY(-2px);
+transform:translateY(-3px);
 
 }
 
-/* ---------- Hero ---------- */
+/* Hero */
 
 .hero{
-
-height:100vh;
 
 display:flex;
 
 justify-content:center;
 
 align-items:center;
+
+height:100vh;
 
 padding-top:80px;
 
@@ -179,39 +172,37 @@ padding-top:80px;
 
 width:420px;
 
-padding:45px;
+padding:40px;
 
 text-align:center;
 
-background:rgba(255,255,255,.28);
+background:rgba(255,255,255,.30);
 
 backdrop-filter:blur(20px);
 
-border:1px solid rgba(255,255,255,.5);
-
 border-radius:30px;
 
-box-shadow:0 20px 40px rgba(255,105,180,.2);
+box-shadow:0 20px 40px rgba(255,105,180,.25);
 
-animation:fadeUp 1s;
+animation:fade 1s;
 
 }
 
-/* ---------- รูป ---------- */
+/* รูป */
 
 .profile{
 
-width:220px;
+width:200px;
 
-height:220px;
+height:200px;
 
 border-radius:50%;
 
 object-fit:cover;
 
-border:7px solid white;
+border:6px solid white;
 
-box-shadow:0 15px 35px rgba(255,105,180,.35);
+box-shadow:0 10px 30px rgba(255,105,180,.35);
 
 transition:.4s;
 
@@ -219,29 +210,29 @@ transition:.4s;
 
 .profile:hover{
 
-transform:scale(1.05) rotate(2deg);
+transform:scale(1.08);
 
 }
 
-/* ---------- ข้อความ ---------- */
+/* ข้อความ */
 
 h1{
 
 margin-top:25px;
 
-font-size:40px;
-
 color:#e75480;
+
+font-size:38px;
 
 }
 
 h2{
 
-margin-top:8px;
+margin-top:10px;
 
 font-weight:400;
 
-color:#ff6fa8;
+color:#ff79ac;
 
 }
 
@@ -249,15 +240,13 @@ p{
 
 margin-top:20px;
 
-font-size:17px;
-
 line-height:1.8;
 
 color:#666;
 
 }
 
-/* ---------- ปุ่ม ---------- */
+/* ปุ่ม */
 
 .btn{
 
@@ -265,41 +254,43 @@ display:inline-block;
 
 margin-top:30px;
 
-padding:14px 38px;
+padding:14px 35px;
 
-background:linear-gradient(45deg,#ff7eb6,#ff99c8);
+border-radius:40px;
+
+background:#ff85b5;
 
 color:white;
 
 text-decoration:none;
 
-border-radius:40px;
-
 font-size:18px;
 
 transition:.35s;
 
-box-shadow:0 10px 25px rgba(255,105,180,.3);
+box-shadow:0 10px 20px rgba(255,105,180,.3);
 
 }
 
 .btn:hover{
 
-transform:translateY(-5px) scale(1.05);
+background:#ff5c9e;
 
-box-shadow:0 15px 30px rgba(255,105,180,.45);
+transform:translateY(-5px);
+
+box-shadow:0 15px 25px rgba(255,105,180,.4);
 
 }
 
-/* ---------- Animation ---------- */
+/* Animation */
 
-@keyframes fadeUp{
+@keyframes fade{
 
 from{
 
 opacity:0;
 
-transform:translateY(40px);
+transform:translateY(30px);
 
 }
 
@@ -315,15 +306,19 @@ transform:translateY(0);
 
 footer{
 
-text-align:center;
+position:absolute;
 
-padding:20px;
+bottom:20px;
+
+width:100%;
+
+text-align:center;
 
 color:#d63384;
 
-font-size:15px;
-
 }
+
+/* มือถือ */
 
 @media(max-width:768px){
 
@@ -333,8 +328,6 @@ flex-direction:column;
 
 gap:15px;
 
-padding:20px;
-
 }
 
 nav ul{
@@ -342,8 +335,6 @@ nav ul{
 flex-wrap:wrap;
 
 justify-content:center;
-
-gap:15px;
 
 }
 
@@ -355,15 +346,9 @@ width:90%;
 
 .profile{
 
-width:180px;
+width:170px;
 
-height:180px;
-
-}
-
-h1{
-
-font-size:32px;
+height:170px;
 
 }
 
@@ -374,6 +359,9 @@ font-size:32px;
 </head>
 
 <body>
+
+<div class="circle1"></div>
+<div class="circle2"></div>
 
 <nav>
 
@@ -399,7 +387,7 @@ font-size:32px;
 
 <div class="card">
 
-<img src="images/profile.jpg" alt="Profile" class="profile">
+<img src="images/profile.jpg" class="profile">
 
 <h1>สวัสดีค่ะ 👋</h1>
 
@@ -415,7 +403,7 @@ font-size:32px;
 
 <br>
 
-มีความสนใจด้านการพัฒนาเว็บไซต์ การออกแบบ และการเขียนโปรแกรม
+ยินดีที่ได้รู้จักทุกคนค่ะ 💖
 
 </p>
 
@@ -427,7 +415,7 @@ font-size:32px;
 
 <footer>
 
-© 2026 My Portfolio | Made with 💖
+Made with 💗 by Your Name
 
 </footer>
 
