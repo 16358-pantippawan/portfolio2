@@ -1,1 +1,939 @@
 
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>กิจกรรมและผลงาน | ทิพวรรณ ดวงทำ</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Mali:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: "Kanit", sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #fff5f8,
+                #ffe4ee,
+                #fbd6e5
+            );
+
+            color: #6b4554;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           Navigation
+        ========================= */
+
+        nav {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 90%;
+
+            max-width: 900px;
+
+            background: rgba(255,255,255,0.65);
+
+            backdrop-filter: blur(15px);
+
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.8);
+
+            border-radius: 50px;
+
+            padding: 14px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(213,120,150,0.15);
+
+            z-index: 100;
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #9d6077;
+
+            margin: 0 12px;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: #e36f9b;
+        }
+
+
+        /* =========================
+           Background
+        ========================= */
+
+        .shape {
+
+            position: fixed;
+
+            border-radius: 50%;
+
+            z-index: -1;
+        }
+
+
+        .shape1 {
+
+            width: 230px;
+
+            height: 230px;
+
+            background: #ffc9dc;
+
+            top: 15%;
+
+            left: -90px;
+
+            opacity: 0.7;
+        }
+
+
+        .shape2 {
+
+            width: 280px;
+
+            height: 280px;
+
+            background: #f8c5d8;
+
+            bottom: -100px;
+
+            right: -90px;
+
+            opacity: 0.6;
+        }
+
+
+        .shape3 {
+
+            width: 100px;
+
+            height: 100px;
+
+            background: white;
+
+            top: 40%;
+
+            right: 10%;
+
+            opacity: 0.6;
+        }
+
+
+        /* =========================
+           Main
+        ========================= */
+
+        .activities {
+
+            min-height: 100vh;
+
+            padding: 130px 20px 60px;
+
+            display: flex;
+
+            justify-content: center;
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1100px;
+        }
+
+
+        /* =========================
+           Title
+        ========================= */
+
+        .title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .title p {
+
+            color: #d96d93;
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .title h1 {
+
+            font-family: "Mali", cursive;
+
+            font-size: 40px;
+
+            color: #d85f8a;
+        }
+
+
+        .title .line {
+
+            width: 70px;
+
+            height: 4px;
+
+            background: #efa2bd;
+
+            border-radius: 20px;
+
+            margin: 12px auto;
+        }
+
+
+        .title-description {
+
+            color: #876171;
+
+            font-size: 16px;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           Activity Grid
+        ========================= */
+
+        .activity-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+
+        /* =========================
+           Activity Card
+        ========================= */
+
+        .activity-card {
+
+            background:
+                rgba(255,255,255,0.60);
+
+            backdrop-filter: blur(15px);
+
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.8);
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(201,105,140,0.12);
+
+            transition: 0.35s;
+        }
+
+
+        .activity-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 45px rgba(201,105,140,0.22);
+        }
+
+
+        /* =========================
+           Image
+        ========================= */
+
+        .activity-image {
+
+            width: 100%;
+
+            height: 230px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd7e4,
+                    #f8b6cd
+                );
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .activity-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+        }
+
+
+        .activity-card:hover
+        .activity-image img {
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           Placeholder
+        ========================= */
+
+        .placeholder {
+
+            text-align: center;
+
+            color: #c66b8b;
+
+            font-size: 65px;
+        }
+
+
+        .placeholder p {
+
+            font-size: 15px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           Content
+        ========================= */
+
+        .activity-content {
+
+            padding: 25px;
+        }
+
+
+        .category {
+
+            display: inline-block;
+
+            background: #f6b1c9;
+
+            color: white;
+
+            padding: 5px 13px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .activity-content h2 {
+
+            color: #d45f89;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .activity-content p {
+
+            color: #745463;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           Skills
+        ========================= */
+
+        .skills {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+
+        .skill {
+
+            background:
+                rgba(255,255,255,0.8);
+
+            color: #b9637f;
+
+            padding: 5px 11px;
+
+            border-radius: 15px;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           Message
+        ========================= */
+
+        .activity-note {
+
+            margin-top: 40px;
+
+            background:
+                rgba(255,255,255,0.55);
+
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.8);
+
+            border-radius: 30px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px rgba(201,105,140,0.12);
+        }
+
+
+        .activity-note h2 {
+
+            color: #d85f8a;
+
+            font-size: 23px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .activity-note p {
+
+            color: #745463;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           Emoji
+        ========================= */
+
+        .cute {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            font-size: 25px;
+
+            letter-spacing: 10px;
+        }
+
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 20px;
+
+            color: #a26378;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           Responsive
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            nav {
+
+                width: 95%;
+
+                padding: 12px 8px;
+            }
+
+
+            nav a {
+
+                margin: 0 5px;
+
+                font-size: 12px;
+            }
+
+
+            .title h1 {
+
+                font-size: 32px;
+            }
+
+
+            .activity-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .activity-image {
+
+                height: 210px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="index.html">
+            🏠 หน้าแรก
+        </a>
+
+        <a href="personal.html">
+            🌷 ประวัติส่วนตัว
+        </a>
+
+        <a href="education.html">
+            🎓 การศึกษา
+        </a>
+
+        <a href="activities.html">
+            ✨ กิจกรรมและผลงาน
+        </a>
+
+        <a href="contact.html">
+            💌 ติดต่อ
+        </a>
+
+    </nav>
+
+
+    <!-- Background -->
+
+    <div class="shape shape1"></div>
+
+    <div class="shape shape2"></div>
+
+    <div class="shape shape3"></div>
+
+
+    <!-- Main -->
+
+    <section class="activities">
+
+        <div class="container">
+
+
+            <!-- Title -->
+
+            <div class="title">
+
+                <p>
+                    ✨ My Activities ✨
+                </p>
+
+                <h1>
+                    กิจกรรมและผลงาน
+                </h1>
+
+                <div class="line"></div>
+
+                <p class="title-description">
+
+                    รวมกิจกรรม ผลงาน และประสบการณ์
+                    ที่ฉันได้เรียนรู้และพัฒนาตัวเอง 💗
+
+                </p>
+
+            </div>
+
+
+            <!-- Activity Grid -->
+
+            <div class="activity-grid">
+
+
+                <!-- Activity 1 -->
+
+                <div class="activity-card">
+
+                    <div class="activity-image">
+
+                        <!--
+                            ใส่รูปจริงได้โดยเปลี่ยนเป็น
+
+                            <img
+                                src="images/activity1.jpg"
+                                alt="กิจกรรมที่ 1"
+                            >
+                        -->
+
+                        <div class="placeholder">
+
+                            💻
+
+                            <p>
+                                เพิ่มรูปกิจกรรมที่นี่
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-content">
+
+                        <span class="category">
+                            💻 ผลงาน
+                        </span>
+
+                        <h2>
+                            การสร้างเว็บไซต์ Portfolio
+                        </h2>
+
+                        <p>
+
+                            ฝึกสร้างเว็บไซต์ Portfolio
+                            เพื่อรวบรวมประวัติส่วนตัว
+                            ประวัติการศึกษา กิจกรรม
+                            และผลงานต่าง ๆ
+
+                        </p>
+
+
+                        <div class="skills">
+
+                            <span class="skill">
+                                HTML
+                            </span>
+
+                            <span class="skill">
+                                CSS
+                            </span>
+
+                            <span class="skill">
+                                GitHub
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Activity 2 -->
+
+                <div class="activity-card">
+
+                    <div class="activity-image">
+
+                        <div class="placeholder">
+
+                            🎨
+
+                            <p>
+                                เพิ่มรูปกิจกรรมที่นี่
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-content">
+
+                        <span class="category">
+                            🎨 การออกแบบ
+                        </span>
+
+                        <h2>
+                            กิจกรรมด้านการออกแบบ
+                        </h2>
+
+                        <p>
+
+                            ฝึกสร้างสรรค์ผลงานด้านกราฟิก
+                            และการออกแบบสื่อ
+                            เพื่อพัฒนาความคิดสร้างสรรค์
+
+                        </p>
+
+
+                        <div class="skills">
+
+                            <span class="skill">
+                                Design
+                            </span>
+
+                            <span class="skill">
+                                Creativity
+                            </span>
+
+                            <span class="skill">
+                                Graphic
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Activity 3 -->
+
+                <div class="activity-card">
+
+                    <div class="activity-image">
+
+                        <div class="placeholder">
+
+                            📚
+
+                            <p>
+                                เพิ่มรูปกิจกรรมที่นี่
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-content">
+
+                        <span class="category">
+                            📚 โครงงาน
+                        </span>
+
+                        <h2>
+                            โครงงานและการเรียนรู้
+                        </h2>
+
+                        <p>
+
+                            การทำโครงงานและกิจกรรม
+                            ที่ช่วยฝึกการทำงานเป็นทีม
+                            การแก้ปัญหา และความรับผิดชอบ
+
+                        </p>
+
+
+                        <div class="skills">
+
+                            <span class="skill">
+                                Teamwork
+                            </span>
+
+                            <span class="skill">
+                                Responsibility
+                            </span>
+
+                            <span class="skill">
+                                Problem Solving
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Activity 4 -->
+
+                <div class="activity-card">
+
+                    <div class="activity-image">
+
+                        <div class="placeholder">
+
+                            🏆
+
+                            <p>
+                                เพิ่มรูปกิจกรรมที่นี่
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-content">
+
+                        <span class="category">
+                            🏆 กิจกรรม
+                        </span>
+
+                        <h2>
+                            กิจกรรมและเกียรติบัตร
+                        </h2>
+
+                        <p>
+
+                            รวบรวมกิจกรรมที่เข้าร่วม
+                            รวมถึงเกียรติบัตร
+                            และประสบการณ์ต่าง ๆ
+                            ที่ได้รับจากการเรียน
+
+                        </p>
+
+
+                        <div class="skills">
+
+                            <span class="skill">
+                                Activity
+                            </span>
+
+                            <span class="skill">
+                                Certificate
+                            </span>
+
+                            <span class="skill">
+                                Experience
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Note -->
+
+            <div class="activity-note">
+
+                <h2>
+                    🌸 ประสบการณ์ที่ได้รับ
+                </h2>
+
+                <p>
+
+                    ทุกกิจกรรมเป็นโอกาสที่ทำให้ฉันได้เรียนรู้
+                    ฝึกความรับผิดชอบ การทำงานร่วมกับผู้อื่น
+                    และพัฒนาทักษะของตนเอง
+                    เพื่อนำประสบการณ์ไปใช้ในการเรียน
+                    และการทำงานในอนาคต 💕
+
+                </p>
+
+            </div>
+
+
+            <!-- Cute Emoji -->
+
+            <div class="cute">
+
+                💻 🌸 ✨ 🎀 🏆 🌷
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        Made with ♡ by Thipwan 🌸
+
+    </footer>
+
+
+</body>
+
+</html>
