@@ -4,230 +4,503 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | ทิพวรรณ ดวงทำ</title>
+    <title>Thipwan Duangtham | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Mali:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Arial", sans-serif;
         }
 
         body {
-            background-color: #fff5f8;
-            color: #5a3d46;
+            font-family: "Kanit", sans-serif;
+            background: linear-gradient(
+                135deg,
+                #fff5f8,
+                #ffe4ee,
+                #fbd6e5
+            );
+            color: #6b4554;
+            min-height: 100vh;
         }
 
-        /* เมนูด้านบน */
+        /* =========================
+           Navigation
+        ========================= */
+
         nav {
-            background-color: #f8b6c8;
-            padding: 18px 0;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 900px;
+
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 50px;
+
+            padding: 14px 25px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+            box-shadow: 0 10px 30px rgba(213, 120, 150, 0.15);
+
+            z-index: 100;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-            font-weight: bold;
+            color: #9d6077;
+            margin: 0 12px;
+            font-size: 15px;
+            font-weight: 500;
+
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #8e5266;
+            color: #e36f9b;
         }
 
-        /* ส่วนหน้าหลัก */
+        /* =========================
+           Background Decoration
+        ========================= */
+
+        .shape {
+            position: fixed;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(1px);
+        }
+
+        .shape1 {
+            width: 250px;
+            height: 250px;
+            background: #ffc9dc;
+            top: 10%;
+            left: -80px;
+            opacity: 0.7;
+        }
+
+        .shape2 {
+            width: 300px;
+            height: 300px;
+            background: #f8c5d8;
+            bottom: -100px;
+            right: -80px;
+            opacity: 0.6;
+        }
+
+        .shape3 {
+            width: 120px;
+            height: 120px;
+            background: #fff;
+            top: 35%;
+            right: 10%;
+            opacity: 0.6;
+        }
+
+        /* =========================
+           Home
+        ========================= */
+
         .home {
-            min-height: calc(100vh - 65px);
+            min-height: 100vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             text-align: center;
-            padding: 40px 20px;
-            position: relative;
-            overflow: hidden;
-        }
 
-        /* วงกลมตกแต่ง */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .circle1 {
-            width: 180px;
-            height: 180px;
-            background-color: #ffd6e2;
-            top: 50px;
-            left: 5%;
-        }
-
-        .circle2 {
-            width: 130px;
-            height: 130px;
-            background-color: #f9c4d5;
-            bottom: 50px;
-            right: 8%;
-        }
-
-        .circle3 {
-            width: 80px;
-            height: 80px;
-            background-color: #ffe5ed;
-            top: 25%;
-            right: 15%;
+            padding: 120px 20px 50px;
         }
 
         .content {
+            width: 100%;
+            max-width: 700px;
+
+            background: rgba(255,255,255,0.45);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.8);
+
+            border-radius: 35px;
+
+            padding: 50px 30px;
+
+            box-shadow:
+                0 20px 50px rgba(201, 105, 140, 0.15);
+        }
+
+        /* =========================
+           Profile
+        ========================= */
+
+        .profile-container {
             position: relative;
-            z-index: 1;
+
+            width: 230px;
+            height: 230px;
+
+            margin: 0 auto 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* รูปโปรไฟล์ */
-        .profile-img {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
+        .profile-ring {
+            position: absolute;
+
+            width: 230px;
+            height: 230px;
+
             border-radius: 50%;
-            border: 8px solid white;
-            box-shadow: 0 8px 25px rgba(220, 120, 150, 0.25);
-            margin-bottom: 25px;
+
+            border: 5px solid #f5a8c4;
+
+            border-top-color: #e875a0;
+            border-right-color: #ffd1e0;
+
+            animation: rotate 8s linear infinite;
         }
 
-        /* ข้อความ */
-        h1 {
-            font-size: 40px;
-            color: #d96b91;
-            margin-bottom: 12px;
+        .profile-img {
+            width: 195px;
+            height: 195px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 7px solid white;
+
+            box-shadow:
+                0 10px 30px rgba(206, 105, 140, 0.25);
         }
 
-        .nickname {
-            font-size: 20px;
-            color: #a85c76;
-            margin-bottom: 15px;
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
-        .description {
+        /* =========================
+           Emoji
+        ========================= */
+
+        .emoji {
+            position: absolute;
+            font-size: 28px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .emoji1 {
+            top: 5px;
+            right: 0;
+        }
+
+        .emoji2 {
+            bottom: 15px;
+            left: 0;
+            animation-delay: 1s;
+        }
+
+        .emoji3 {
+            top: 45%;
+            right: -25px;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* =========================
+           Text
+        ========================= */
+
+        .welcome {
+            color: #d96d93;
             font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-family: "Mali", cursive;
+            font-size: 42px;
+            color: #d85f8a;
+            margin-bottom: 10px;
+        }
+
+        .student {
+            font-size: 19px;
+            color: #8f596e;
+            margin-bottom: 8px;
+        }
+
+        .school {
+            font-size: 17px;
+            color: #a56a7e;
             line-height: 1.8;
             margin-bottom: 25px;
         }
 
-        /* ปุ่ม */
+        /* =========================
+           Tags
+        ========================= */
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.75);
+
+            color: #c75d82;
+
+            padding: 8px 16px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            box-shadow:
+                0 5px 15px rgba(200, 100, 140, 0.08);
+        }
+
+        /* =========================
+           Button
+        ========================= */
+
         .button {
             display: inline-block;
-            background-color: #e889a8;
-            color: white;
+
             text-decoration: none;
-            padding: 12px 28px;
+
+            background: linear-gradient(
+                135deg,
+                #ee91b2,
+                #d96d98
+            );
+
+            color: white;
+
+            padding: 13px 28px;
+
             border-radius: 30px;
+
             font-size: 16px;
-            font-weight: bold;
-            box-shadow: 0 5px 12px rgba(220, 120, 150, 0.25);
+            font-weight: 500;
+
+            box-shadow:
+                0 8px 20px rgba(217, 109, 152, 0.25);
+
             transition: 0.3s;
         }
 
         .button:hover {
-            background-color: #d96b91;
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 25px rgba(217, 109, 152, 0.35);
         }
 
-        /* Footer */
+        /* =========================
+           Footer
+        ========================= */
+
         footer {
-            background-color: #f8b6c8;
-            color: white;
             text-align: center;
-            padding: 15px;
+
+            padding: 20px;
+
+            color: #a26378;
+
             font-size: 14px;
         }
 
-        /* รองรับมือถือ */
+        /* =========================
+           Mobile
+        ========================= */
+
         @media (max-width: 600px) {
 
+            nav {
+                width: 95%;
+                padding: 12px 8px;
+            }
+
             nav a {
-                margin: 5px;
-                font-size: 13px;
+                margin: 0 5px;
+                font-size: 12px;
+            }
+
+            .content {
+                padding: 40px 20px;
+                border-radius: 28px;
+            }
+
+            .profile-container {
+                width: 190px;
+                height: 190px;
+            }
+
+            .profile-ring {
+                width: 190px;
+                height: 190px;
             }
 
             .profile-img {
-                width: 170px;
-                height: 170px;
+                width: 160px;
+                height: 160px;
             }
 
             h1 {
-                font-size: 30px;
+                font-size: 32px;
             }
 
-            .description {
-                font-size: 16px;
+            .student {
+                font-size: 17px;
             }
 
-            .circle1 {
-                width: 100px;
-                height: 100px;
+            .school {
+                font-size: 15px;
             }
 
-            .circle2 {
-                width: 80px;
-                height: 80px;
+            .emoji {
+                font-size: 23px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- เมนู -->
+    <!-- Navigation -->
     <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="about.html">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="portfolio.html">ผลงาน</a>
-        <a href="contact.html">ติดต่อ</a>
+
+        <a href="index.html">🏠 หน้าแรก</a>
+
+        <a href="about.html">🌷 ประวัติส่วนตัว</a>
+
+        <a href="education.html">🎓 การศึกษา</a>
+
+        <a href="portfolio.html">💻 ผลงาน</a>
+
+        <a href="contact.html">💌 ติดต่อ</a>
+
     </nav>
 
-    <!-- หน้าหลัก -->
-    <section class="home">
 
-        <!-- วงกลมตกแต่ง -->
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
+    <!-- Background -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+
+
+    <!-- Home -->
+    <section class="home">
 
         <div class="content">
 
-            <!-- รูปโปรไฟล์ -->
-            <!-- เปลี่ยน profile.jpg เป็นชื่อไฟล์รูปของตัวเอง -->
-            <img src="images/profile.jpg"
-                 alt="รูปโปรไฟล์ ทิพวรรณ ดวงทำ"
-                 class="profile-img">
+            <!-- Profile -->
+            <div class="profile-container">
 
-            <h1>ทิพวรรณ ดวงทำ</h1>
+                <div class="profile-ring"></div>
 
-            <p class="nickname">
-                ✿ นักเรียนชั้นมัธยมศึกษาปีที่ 6 ✿
+                <!-- เปลี่ยนชื่อรูปตรงนี้ -->
+                <img
+                    src="images/profile.jpg"
+                    alt="รูปโปรไฟล์ ทิพวรรณ ดวงทำ"
+                    class="profile-img"
+                >
+
+                <span class="emoji emoji1">🌸</span>
+                <span class="emoji emoji2">🎀</span>
+                <span class="emoji emoji3">✨</span>
+
+            </div>
+
+
+            <!-- Text -->
+
+            <p class="welcome">
+                🌷 Welcome to my Portfolio 🌷
             </p>
 
-            <p class="description">
+            <h1>
+                ทิพวรรณ ดวงทำ
+            </h1>
+
+            <p class="student">
+                🎓 นักเรียนชั้นมัธยมศึกษาปีที่ 6
+            </p>
+
+            <p class="school">
                 แผนการเรียนวิทยาศาสตร์ - คณิตศาสตร์<br>
-                โรงเรียนพานทอง
+                🏫 โรงเรียนพานทอง
             </p>
+
+
+            <!-- Tags -->
+
+            <div class="tags">
+
+                <span class="tag">💻 Technology</span>
+
+                <span class="tag">📚 Science</span>
+
+                <span class="tag">🎨 Creativity</span>
+
+                <span class="tag">🌷 Learning</span>
+
+            </div>
+
+
+            <!-- Button -->
 
             <a href="about.html" class="button">
                 รู้จักฉันเพิ่มเติม ♡
             </a>
 
         </div>
+
     </section>
 
+
     <!-- Footer -->
+
     <footer>
-        © 2026 Thipwan Duangtham | My Portfolio ♡
+        Made with ♡ by Thipwan 🌸
     </footer>
 
 </body>
