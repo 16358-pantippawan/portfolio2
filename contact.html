@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ช่องทางการติดต่อ | ทิพวรรณ ดวงทำ</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Mali:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           Reset
+        ========================= */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        /* =========================
+           Body
+        ========================= */
+
+        body {
+
+            font-family: "Kanit", sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #fff5f8,
+                #ffe4ee,
+                #fbd6e5
+            );
+
+            color: #6b4554;
+
+            min-height: 100vh;
+
+        }
+
+
+        /* =========================
+           Navigation
+        ========================= */
+
+        nav {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 90%;
+
+            max-width: 900px;
+
+            background:
+                rgba(255,255,255,0.65);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            border:
+                1px solid rgba(255,255,255,0.8);
+
+            border-radius: 50px;
+
+            padding: 14px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px
+                rgba(213,120,150,0.15);
+
+            z-index: 100;
+
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #9d6077;
+
+            margin: 0 12px;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+
+        }
+
+
+        nav a:hover {
+
+            color: #e36f9b;
+
+        }
+
+
+        /* =========================
+           Background Decoration
+        ========================= */
+
+        .shape {
+
+            position: fixed;
+
+            border-radius: 50%;
+
+            z-index: -1;
+
+        }
+
+
+        .shape1 {
+
+            width: 230px;
+
+            height: 230px;
+
+            background: #ffc9dc;
+
+            top: 15%;
+
+            left: -90px;
+
+            opacity: 0.7;
+
+        }
+
+
+        .shape2 {
+
+            width: 280px;
+
+            height: 280px;
+
+            background: #f8c5d8;
+
+            bottom: -100px;
+
+            right: -90px;
+
+            opacity: 0.6;
+
+        }
+
+
+        .shape3 {
+
+            width: 100px;
+
+            height: 100px;
+
+            background: white;
+
+            top: 40%;
+
+            right: 10%;
+
+            opacity: 0.6;
+
+        }
+
+
+        /* =========================
+           Main
+        ========================= */
+
+        .contact {
+
+            min-height: 100vh;
+
+            padding:
+                130px 20px 60px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1000px;
+
+        }
+
+
+        /* =========================
+           Title
+        ========================= */
+
+        .title {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .title p {
+
+            color: #d96d93;
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .title h1 {
+
+            font-family: "Mali", cursive;
+
+            font-size: 40px;
+
+            color: #d85f8a;
+
+        }
+
+
+        .title .line {
+
+            width: 70px;
+
+            height: 4px;
+
+            background: #efa2bd;
+
+            border-radius: 20px;
+
+            margin: 12px auto;
+
+        }
+
+
+        .title-description {
+
+            color: #876171;
+
+            font-size: 16px;
+
+            margin-top: 15px;
+
+        }
+
+
+        /* =========================
+           Contact Layout
+        ========================= */
+
+        .contact-wrapper {
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            gap: 30px;
+
+        }
+
+
+        /* =========================
+           Profile Card
+        ========================= */
+
+        .profile-card {
+
+            background:
+                rgba(255,255,255,0.60);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            border:
+                1px solid rgba(255,255,255,0.8);
+
+            border-radius: 30px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px
+                rgba(201,105,140,0.12);
+
+        }
+
+
+        /* =========================
+           Profile Circle
+        ========================= */
+
+        .profile-circle {
+
+            width: 160px;
+
+            height: 160px;
+
+            margin:
+                0 auto 20px;
+
+            padding: 6px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f59cbb,
+                    #ffd6e4
+                );
+
+            box-shadow:
+                0 10px 25px
+                rgba(208,105,140,0.2);
+
+        }
+
+
+        .profile-circle img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border:
+                5px solid white;
+
+        }
+
+
+        .profile-card h2 {
+
+            font-family: "Mali", cursive;
+
+            color: #d65e89;
+
+            font-size: 24px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .nickname {
+
+            color: #a66379;
+
+            font-size: 16px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .profile-text {
+
+            color: #80606d;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================
+           Contact Cards
+        ========================= */
+
+        .contact-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .contact-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 20px;
+
+            background:
+                rgba(255,255,255,0.60);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            border:
+                1px solid rgba(255,255,255,0.8);
+
+            border-radius: 22px;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 12px 30px
+                rgba(201,105,140,0.10);
+
+            transition: 0.3s;
+
+        }
+
+
+        .contact-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 18px 35px
+                rgba(201,105,140,0.20);
+
+        }
+
+
+        /* =========================
+           Contact Icon
+        ========================= */
+
+        .contact-icon {
+
+            min-width: 55px;
+
+            height: 55px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8b1c9,
+                    #ffd5e3
+                );
+
+            font-size: 27px;
+
+        }
+
+
+        .contact-info h3 {
+
+            color: #d45f89;
+
+            font-size: 17px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .contact-info p {
+
+            color: #80606d;
+
+            font-size: 13px;
+
+            word-break: break-word;
+
+        }
+
+
+        /* =========================
+           Message
+        ========================= */
+
+        .message {
+
+            margin-top: 30px;
+
+            background:
+                rgba(255,255,255,0.60);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            border:
+                1px solid rgba(255,255,255,0.8);
+
+            border-radius: 25px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 12px 30px
+                rgba(201,105,140,0.10);
+
+        }
+
+
+        .message h2 {
+
+            color: #d85f8a;
+
+            font-size: 22px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .message p {
+
+            color: #745463;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================
+           Cute Emoji
+        ========================= */
+
+        .cute {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            font-size: 25px;
+
+            letter-spacing: 10px;
+
+        }
+
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 20px;
+
+            color: #a26378;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================
+           Responsive
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            nav {
+
+                width: 95%;
+
+                padding: 12px 8px;
+
+            }
+
+
+            nav a {
+
+                margin: 0 5px;
+
+                font-size: 12px;
+
+            }
+
+
+            .title h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .contact-wrapper {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .contact-list {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .profile-card {
+
+                padding: 30px 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         Navigation
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">
+            🏠 หน้าแรก
+        </a>
+
+        <a href="personal.html">
+            🌷 ประวัติส่วนตัว
+        </a>
+
+        <a href="education.html">
+            🎓 การศึกษา
+        </a>
+
+        <a href="activities.html">
+            ✨ กิจกรรมและผลงาน
+        </a>
+
+        <a href="contact.html">
+            💌 ติดต่อ
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         Background
+    ========================= -->
+
+    <div class="shape shape1"></div>
+
+    <div class="shape shape2"></div>
+
+    <div class="shape shape3"></div>
+
+
+    <!-- =========================
+         Contact
+    ========================= -->
+
+    <section class="contact">
+
+        <div class="container">
+
+
+            <!-- Title -->
+
+            <div class="title">
+
+                <p>
+                    💌 Contact Me 💌
+                </p>
+
+                <h1>
+                    ช่องทางการติดต่อ
+                </h1>
+
+                <div class="line"></div>
+
+                <p class="title-description">
+
+                    หากต้องการพูดคุยหรือสอบถามข้อมูล
+                    สามารถติดต่อฉันผ่านช่องทางต่าง ๆ ได้เลยค่ะ 🌷
+
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 Contact Wrapper
+            ========================= -->
+
+            <div class="contact-wrapper">
+
+
+                <!-- =========================
+                     Profile
+                ========================= -->
+
+                <div class="profile-card">
+
+
+                    <div class="profile-circle">
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="รูปโปรไฟล์ ทิพวรรณ ดวงทำ"
+                        >
+
+                    </div>
+
+
+                    <h2>
+                        นางสาวทิพวรรณ ดวงทำ
+                    </h2>
+
+
+                    <p class="nickname">
+                        🎀 แพน | นักเรียนชั้น ม.6
+                    </p>
+
+
+                    <p class="profile-text">
+
+                        นักเรียนแผนการเรียน
+                        วิทยาศาสตร์ - คณิตศาสตร์
+                        โรงเรียนพานทอง
+
+                        <br>
+
+                        💗 สนใจเรียนรู้สิ่งใหม่ ๆ
+                        และพัฒนาทักษะของตัวเอง
+
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     Contact List
+                ========================= -->
+
+                <div>
+
+
+                    <div class="contact-list">
+
+
+                        <!-- Email -->
+
+                        <a
+                            href="mailto:ใส่อีเมลของคุณ@example.com"
+                            class="contact-card"
+                        >
+
+                            <div class="contact-icon">
+                                📧
+                            </div>
+
+
+                            <div class="contact-info">
+
+                                <h3>
+                                    Email
+                                </h3>
+
+                                <p>
+                                    ใส่อีเมลของคุณ
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Instagram -->
+
+                        <a
+                            href="#"
+                            class="contact-card"
+                        >
+
+                            <div class="contact-icon">
+                                📷
+                            </div>
+
+
+                            <div class="contact-info">
+
+                                <h3>
+                                    Instagram
+                                </h3>
+
+                                <p>
+                                    @username
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Facebook -->
+
+                        <a
+                            href="#"
+                            class="contact-card"
+                        >
+
+                            <div class="contact-icon">
+                                💙
+                            </div>
+
+
+                            <div class="contact-info">
+
+                                <h3>
+                                    Facebook
+                                </h3>
+
+                                <p>
+                                    Facebook ของฉัน
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- GitHub -->
+
+                        <a
+                            href="#"
+                            class="contact-card"
+                        >
+
+                            <div class="contact-icon">
+                                💻
+                            </div>
+
+
+                            <div class="contact-info">
+
+                                <h3>
+                                    GitHub
+                                </h3>
+
+                                <p>
+                                    GitHub ของฉัน
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Phone -->
+
+                        <a
+                            href="tel:0000000000"
+                            class="contact-card"
+                        >
+
+                            <div class="contact-icon">
+                                📱
+                            </div>
+
+
+                            <div class="contact-info">
+
+                                <h3>
+                                    โทรศัพท์
+                                </h3>
+
+                                <p>
+                                    000-000-0000
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- Location -->
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">
+                                📍
+                            </div>
+
+
+                            <div class="contact-info">
+
+                                <h3>
+                                    ที่อยู่
+                                </h3>
+
+                                <p>
+                                    ชลบุรี ประเทศไทย
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Message -->
+
+                    <div class="message">
+
+                        <h2>
+                            🌸 ขอบคุณที่เข้าชม Portfolio 🌸
+                        </h2>
+
+                        <p>
+
+                            ขอบคุณสำหรับการเยี่ยมชมเว็บไซต์
+                            Portfolio ของฉัน
+                            หวังว่าจะได้มีโอกาสพูดคุย
+                            และแลกเปลี่ยนประสบการณ์กันนะคะ 💗
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Cute -->
+
+            <div class="cute">
+
+                💌 🌷 ✨ 🎀 💗 🌸
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Footer
+    ========================= -->
+
+    <footer>
+
+        Made with ♡ by Thipwan 🌸
+
+    </footer>
+
+
+</body>
+
+</html>
