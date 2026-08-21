@@ -1,528 +1,234 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>My Pink Portfolio 🌸</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Kanit',sans-serif;
-}
-
-body{
-
-    min-height:100vh;
-
-    background:linear-gradient(
-        135deg,
-        #ffe1ef,
-        #fff0f7,
-        #ffd1e6
-    );
-
-    overflow:hidden;
-
-    cursor:none;
-
-}
-
-
-/* ---------------- ดาวตามเมาส์ ---------------- */
-
-.star{
-
-    position:absolute;
-
-    color:white;
-
-    font-size:18px;
-
-    pointer-events:none;
-
-    animation:starMove 1s linear forwards;
-
-}
-
-@keyframes starMove{
-
-    from{
-
-        opacity:1;
-        transform:scale(1);
-
-    }
-
-    to{
-
-        opacity:0;
-        transform:scale(0) translateY(-30px);
-
-    }
-
-}
-
-
-/* ---------------- ดอกไม้ลอย ---------------- */
-
-
-.floating{
-
-    position:absolute;
-
-    bottom:-50px;
-
-    font-size:30px;
-
-    animation:float 10s linear infinite;
-
-    opacity:.8;
-
-}
-
-
-@keyframes float{
-
-    0%{
-
-        transform:
-        translateY(0)
-        rotate(0deg);
-
-    }
-
-    100%{
-
-        transform:
-        translateY(-110vh)
-        rotate(360deg);
-
-    }
-
-}
-
-
-/* ---------------- Navbar ---------------- */
-
-
-nav{
-
-    position:fixed;
-
-    top:20px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    background:
-    rgba(255,255,255,.35);
-
-    backdrop-filter:blur(15px);
-
-    padding:15px 30px;
-
-    border-radius:50px;
-
-    box-shadow:
-    0 10px 30px rgba(255,100,160,.2);
-
-    z-index:10;
-
-}
-
-
-nav a{
-
-    color:#d63384;
-
-    text-decoration:none;
-
-    margin:0 15px;
-
-    transition:.3s;
-
-}
-
-
-nav a:hover{
-
-    color:#ff4d94;
-
-    text-shadow:
-    0 0 10px #ff8fc7;
-
-}
-
-
-/* ---------------- กล่องหลัก ---------------- */
-
-
-.container{
-
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-
-.card{
-
-    width:420px;
-
-    padding:40px;
-
-    text-align:center;
-
-    background:
-    rgba(255,255,255,.35);
-
-    backdrop-filter:blur(20px);
-
-    border-radius:35px;
-
-    border:
-    1px solid rgba(255,255,255,.6);
-
-
-    box-shadow:
-
-    0 20px 50px rgba(255,105,180,.25);
-
-
-    transition:.5s;
-
-}
-
-
-/* การ์ดเด้ง */
-
-.card:hover{
-
-    transform:
-    translateY(-15px)
-    scale(1.03);
-
-}
-
-
-
-/* ---------------- รูปโปรไฟล์ ---------------- */
-
-
-.profile{
-
-    width:200px;
-
-    height:200px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:8px solid white;
-
-
-    box-shadow:
-
-    0 0 25px #ff9bc7;
-
-
-    transition:.4s;
-
-}
-
-
-.profile:hover{
-
-    transform:
-    rotate(5deg)
-    scale(1.1);
-
-}
-
-
-
-/* ---------------- ข้อความ ---------------- */
-
-
-h1{
-
-    margin-top:20px;
-
-    color:#e75480;
-
-    font-size:38px;
-
-}
-
-
-h2{
-
-    color:#ff69a6;
-
-    font-weight:400;
-
-}
-
-
-p{
-
-    color:#777;
-
-    margin-top:15px;
-
-    line-height:1.8;
-
-}
-
-
-
-/* ---------------- ปุ่ม ---------------- */
-
-
-.btn{
-
-
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:14px 35px;
-
-
-    border-radius:40px;
-
-
-    background:
-
-    linear-gradient(
-        45deg,
-        #ff85b3,
-        #ffb6d9
-    );
-
-
-    color:white;
-
-    text-decoration:none;
-
-
-    box-shadow:
-
-    0 10px 25px rgba(255,105,180,.3);
-
-
-    transition:.4s;
-
-}
-
-
-
-.btn:hover{
-
-    transform:
-    translateY(-5px)
-    scale(1.1);
-
-
-    box-shadow:
-
-    0 15px 35px rgba(255,105,180,.5);
-
-}
-
-
-/* ---------------- ไอคอนน่ารัก ---------------- */
-
-
-.icon{
-
-    font-size:35px;
-
-    margin:10px;
-
-    animation:bounce 2s infinite;
-
-}
-
-
-@keyframes bounce{
-
-    50%{
-
-        transform:translateY(-10px);
-
-    }
-
-}
-
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | ทิพวรรณ ดวงทำ</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+        }
+
+        body {
+            background-color: #fff5f8;
+            color: #5a3d46;
+        }
+
+        /* เมนูด้านบน */
+        nav {
+            background-color: #f8b6c8;
+            padding: 18px 0;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8e5266;
+        }
+
+        /* ส่วนหน้าหลัก */
+        .home {
+            min-height: calc(100vh - 65px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* วงกลมตกแต่ง */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .circle1 {
+            width: 180px;
+            height: 180px;
+            background-color: #ffd6e2;
+            top: 50px;
+            left: 5%;
+        }
+
+        .circle2 {
+            width: 130px;
+            height: 130px;
+            background-color: #f9c4d5;
+            bottom: 50px;
+            right: 8%;
+        }
+
+        .circle3 {
+            width: 80px;
+            height: 80px;
+            background-color: #ffe5ed;
+            top: 25%;
+            right: 15%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* รูปโปรไฟล์ */
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 8px 25px rgba(220, 120, 150, 0.25);
+            margin-bottom: 25px;
+        }
+
+        /* ข้อความ */
+        h1 {
+            font-size: 40px;
+            color: #d96b91;
+            margin-bottom: 12px;
+        }
+
+        .nickname {
+            font-size: 20px;
+            color: #a85c76;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        /* ปุ่ม */
+        .button {
+            display: inline-block;
+            background-color: #e889a8;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 5px 12px rgba(220, 120, 150, 0.25);
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #d96b91;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8b6c8;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        /* รองรับมือถือ */
+        @media (max-width: 600px) {
+
+            nav a {
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .profile-img {
+                width: 170px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .circle1 {
+                width: 100px;
+                height: 100px;
+            }
+
+            .circle2 {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<!-- ดอกไม้และหัวใจลอย -->
-
-<div class="floating" style="left:10%">🌸</div>
-
-<div class="floating" style="left:25%;animation-delay:2s">
-💗
-</div>
-
-<div class="floating" style="left:50%;animation-delay:4s">
-🌸
-</div>
-
-<div class="floating" style="left:70%;animation-delay:1s">
-🎀
-</div>
-
-<div class="floating" style="left:90%;animation-delay:3s">
-💖
-</div>
-
-
-
-<nav>
-
-<a href="#">หน้าหลัก</a>
-
-<a href="about.html">ประวัติส่วนตัว</a>
-<a href="education.html">การศึกษา</a>
-
-<a href="projects.html">ผลงาน</a>
-
-<a href="contact.html">ติดต่อ</a>
-
-</nav>
-
-
-
-<div class="container">
-
-
-<div class="card">
-
-
-<div>
-
-<span class="icon">🐰</span>
-
-<span class="icon">🌸</span>
-
-<span class="icon">🎀</span>
-
-</div>
-
-
-<img 
-src="images/profile.jpg"
-class="profile"
->
-
-
-<h1>
-Welcome to my Portfolio 
-</h1>
-
-
-<h2>
-ทิพวรรณ ดวงทำ
-</h2>
-
-
-<p>
-
-นักเรียนชั้นมัธยมศึกษาปีที่ 6
-
-<br>
-แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์
-<br>
-โรงเรียนพานทอง
-
-<br>
-
-สร้างด้วยความตั้งใจและความรัก 💗
-
-</p>
-
-
-
-<a href="about.html" class="btn">
-
-รู้จักฉันเพิ่มเติม 🌸
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-<script>
-
-
-// ดาวตามเมาส์
-
-document.addEventListener(
-"mousemove",
-function(e){
-
-
-let star=document.createElement("div");
-
-
-star.className="star";
-
-
-star.innerHTML="✦";
-
-
-star.style.left=e.pageX+"px";
-
-star.style.top=e.pageY+"px";
-
-
-document.body.appendChild(star);
-
-
-
-setTimeout(()=>{
-
-star.remove();
-
-},1000);
-
-
-
-}
-
-);
-
-
-</script>
-
+    <!-- เมนู -->
+    <nav>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">ประวัติส่วนตัว</a>
+        <a href="education.html">การศึกษา</a>
+        <a href="portfolio.html">ผลงาน</a>
+        <a href="contact.html">ติดต่อ</a>
+    </nav>
+
+    <!-- หน้าหลัก -->
+    <section class="home">
+
+        <!-- วงกลมตกแต่ง -->
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+
+        <div class="content">
+
+            <!-- รูปโปรไฟล์ -->
+            <!-- เปลี่ยน profile.jpg เป็นชื่อไฟล์รูปของตัวเอง -->
+            <img src="images/profile.jpg"
+                 alt="รูปโปรไฟล์ ทิพวรรณ ดวงทำ"
+                 class="profile-img">
+
+            <h1>ทิพวรรณ ดวงทำ</h1>
+
+            <p class="nickname">
+                ✿ นักเรียนชั้นมัธยมศึกษาปีที่ 6 ✿
+            </p>
+
+            <p class="description">
+                แผนการเรียนวิทยาศาสตร์ - คณิตศาสตร์<br>
+                โรงเรียนพานทอง
+            </p>
+
+            <a href="about.html" class="button">
+                รู้จักฉันเพิ่มเติม ♡
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Thipwan Duangtham | My Portfolio ♡
+    </footer>
 
 </body>
-
 </html>
